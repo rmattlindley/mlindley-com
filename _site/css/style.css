@@ -68,6 +68,15 @@ ul.projects li {
   margin: -50px 0 0 -50px;
 }
 
+#slider {
+  height: 400px;
+  overflow: hidden;
+}
+
+#slider img {
+  margin-top: -20px;
+}
+
 /* ============================== Blog ================================ */
 
 .tumblr_posts li{
@@ -78,7 +87,7 @@ ul.projects li {
   width: 200px;
   overflow: hidden;
   border: 10px solid white;
-  border-radius: 5px;
+  /*border-radius: 5px;*/
   box-shadow: 0px 1px 5px rgba(0,0,0,0.2);
 }
 

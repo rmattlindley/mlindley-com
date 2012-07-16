@@ -3,10 +3,9 @@ layout: default
 ---
 <section role="banner">
   <!-- <img src="http://placekitten.com/g/960/300" /> -->
-  <div id="slider" class="nivoSlider">
-      <img src="http://placekitten.com/g/960/400" alt="">
-      <img src="http://placekitten.com/g/960/410" alt="">
-      <img src="http://placekitten.com/g/960/420" alt="">
-      <img src="http://placekitten.com/g/960/430" alt="">
-  </div>
+	<div id="slider" class="nivoSlider">
+		{% for post in site.posts %}
+			<img src="{{ post.image }}" />
+		{% endfor %}
+	</div>
 </section>
