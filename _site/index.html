@@ -4,6 +4,7 @@
   <meta charset=utf-8 />
   <title> Matt Lindley Design</title>
   <link rel="stylesheet" href="/css/reset.css" />
+  <link rel="stylesheet" href="/css/nivo-slider.css" />
   <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
@@ -26,7 +27,13 @@
   </nav>
 
   <section role="banner">
-  <img src="http://placekitten.com/g/960/300" />
+  <!-- <img src="http://placekitten.com/g/960/300" /> -->
+  <div id="slider" class="nivoSlider">
+      <img src="http://placekitten.com/g/960/400" alt="">
+      <img src="http://placekitten.com/g/960/410" alt="">
+      <img src="http://placekitten.com/g/960/420" alt="">
+      <img src="http://placekitten.com/g/960/430" alt="">
+  </div>
 </section>
 
 
@@ -38,3 +45,20 @@
 
 </body>
 </html>
+
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="/js/jquery.nivo.slider.js"></script>
+
+<script type="text/javascript">
+  $(window).load(function() {
+      $('#slider').nivoSlider({
+        effect: 'fade', // Specify sets like: 'fold,fade,sliceDown'
+        animSpeed: 500, // Slide transition speed
+        pauseTime: 3000, // How long each slide will show
+        startSlide: 0, // Set starting Slide (0 index)
+        directionNav: false, // Next & Prev navigation
+        controlNav: false, // 1,2,3... navigation
+      });
+  });
+</script>
