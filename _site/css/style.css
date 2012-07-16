@@ -47,12 +47,25 @@ nav li a {
   text-decoration: none;
   color: #555;
 }
+ul.projects {
+  width: 980px;
+  float: left;
+  margin-top: 20px;
+}
 ul.projects li {
   float: left;
-  margin: 20px auto;
-  padding: 20px;
-  background: #ececec;
-  width: 200px;
+  margin: 0 20px 20px 0;
+  /*padding: 20px;*/  
+  border: 1px solid #333;
+}
+.img_container {
+  width: 174px;
+  height: 174px;
+  overflow: hidden
+}
+.img_container img {
+  height: 300px;
+  margin: -50px 0 0 -50px;
 }
 
 /* ============================== Blog ================================ */
