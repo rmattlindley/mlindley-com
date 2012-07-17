@@ -1,11 +1,19 @@
 ---
 layout: default
 ---
-<section role="banner">
-  <!-- <img src="http://placekitten.com/g/960/300" /> -->
-	<div id="slider" class="nivoSlider">
-		{% for post in site.posts %}
-			<img src="{{ post.image }}" />
-		{% endfor %}
-	</div>
-</section>
+<ul class="projects">
+  {% for post in site.posts %}
+
+  <li>
+   
+
+    <a href="{{ post.image }}" class="lightbox">
+    	<div class="img_container">
+	    	<img src="{{ post.image }}"/>
+    	</div>
+    </a>
+
+  </li>
+
+  {% endfor %}
+</ul>

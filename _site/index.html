@@ -5,6 +5,7 @@
   <title> Matt Lindley Design</title>
   <link rel="stylesheet" href="/css/reset.css" />
   <link rel="stylesheet" href="/css/nivo-slider.css" />
+  <link rel="stylesheet" href="/css/jquery.lightbox-0.5.css" />
   <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
@@ -12,7 +13,6 @@
 <header>
   <div class="wrapper">
     <h1>Matt Lindley Design</h1>
-    <span class="email_address">rmattlindley@gmail.com</span>
   </div>
 </header>
 
@@ -20,28 +20,105 @@
   <nav>
     <ul>
       <li><a href="/">Home</a></li>
-      <li><a href="/portfolio.html">Portfolio</a></li>
       <li><a href="/about.html">About</a></li>
-      <!-- <li><a href="/blog.html">Blog</a></li> -->
     </ul>
   </nav>
+  <span class="email_address">rmattlindley@gmail.com</span>
 
-  <section role="banner">
-  <!-- <img src="http://placekitten.com/g/960/300" /> -->
-	<div id="slider" class="nivoSlider">
-		
-			<img src="/img/vader.jpg" />
-		
-			<img src="/img/type.jpg" />
-		
-			<img src="/img/limes.jpg" />
-		
-			<img src="/img/gbu.png" />
-		
-			<img src="/img/casio.png" />
-		
-	</div>
-</section>
+  <ul class="projects">
+  
+
+  <li>
+   
+
+    <a href="/img/sn_blog.png" class="lightbox">
+    	<div class="img_container">
+	    	<img src="/img/sn_blog.png"/>
+    	</div>
+    </a>
+
+  </li>
+
+  
+
+  <li>
+   
+
+    <a href="/img/sn_home.png" class="lightbox">
+    	<div class="img_container">
+	    	<img src="/img/sn_home.png"/>
+    	</div>
+    </a>
+
+  </li>
+
+  
+
+  <li>
+   
+
+    <a href="/img/vader.jpg" class="lightbox">
+    	<div class="img_container">
+	    	<img src="/img/vader.jpg"/>
+    	</div>
+    </a>
+
+  </li>
+
+  
+
+  <li>
+   
+
+    <a href="/img/type.jpg" class="lightbox">
+    	<div class="img_container">
+	    	<img src="/img/type.jpg"/>
+    	</div>
+    </a>
+
+  </li>
+
+  
+
+  <li>
+   
+
+    <a href="/img/limes.jpg" class="lightbox">
+    	<div class="img_container">
+	    	<img src="/img/limes.jpg"/>
+    	</div>
+    </a>
+
+  </li>
+
+  
+
+  <li>
+   
+
+    <a href="/img/gbu.png" class="lightbox">
+    	<div class="img_container">
+	    	<img src="/img/gbu.png"/>
+    	</div>
+    </a>
+
+  </li>
+
+  
+
+  <li>
+   
+
+    <a href="/img/casio.png" class="lightbox">
+    	<div class="img_container">
+	    	<img src="/img/casio.png"/>
+    	</div>
+    </a>
+
+  </li>
+
+  
+</ul>
 
 
   <!-- <footer>
@@ -56,16 +133,13 @@
 <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 
 <script type="text/javascript" src="/js/jquery.nivo.slider.js"></script>
+<script type="text/javascript" src="/js/jquery.lightbox-0.5.min.js"></script>
 
 <script type="text/javascript">
-  $(window).load(function() {
-      $('#slider').nivoSlider({
-        effect: 'fade', // Specify sets like: 'fold,fade,sliceDown'
-        animSpeed: 500, // Slide transition speed
-        pauseTime: 3000, // How long each slide will show
-        startSlide: 0, // Set starting Slide (0 index)
-        directionNav: false, // Next & Prev navigation
-        controlNav: false, // 1,2,3... navigation
-      });
+  $(function() {
+    $('a.lightbox').lightBox();
   });
 </script>
+
+
+
