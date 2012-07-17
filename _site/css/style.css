@@ -1,0 +1,22 @@
+#container{
+	width:900px;
+	margin: 140px auto 0 auto;
+}
+
+#container img{
+	display:block;
+	margin:0 auto;
+}
+
+h1{
+	text-align:center;
+	font-family: 'Anton', serif;
+	/*font-weight: 400;*/
+	/*text-shadow: 1px 1px 0px #999;*/
+	text-transform: uppercase;
+	color: #555;
+	letter-spacing: 0.09em;
+ 	word-spacing: 0.1em;
+	margin-top:30px;
+	font-size: 34px;
+}
