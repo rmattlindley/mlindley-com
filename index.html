@@ -5,14 +5,14 @@ layout: default
   {% for post in site.posts %}
 
   <li>
-   
-
-    <a href="{{ post.image }}" class="lightbox">
+    <a href="{{ post.url }}" class="lightbox">
     	<div class="img_container">
 	    	<img src="{{ post.image }}"/>
     	</div>
-    </a>
-
+    	<div class="overlay">
+    	</div>
+    	<h3>{{ post.title }}</h3>
+    </a> 
   </li>
 
   {% endfor %}

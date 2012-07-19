@@ -1,9 +1,53 @@
 body {
-  font: 16px/1.5 verdana, helvetica-neue, helvetica, arial, san-serif;
   background: #eee;
-  color: #000;
   padding: 0;
   margin: 0;
+}
+ /*=============================== General Styles =============================*/
+h1, h2, h3, h4, h5, h6 { 
+  font-family: 'Bree Serif', Georgia, serif; 
+  color: #6f9f00;
+  margin: 20px 0 10px 0;
+}
+body, p { 
+  font-family: 'Open Sans', Verdana, Helvetica, sans-serif; 
+  color: #777;
+  line-height: 140%;
+  margin-bottom: 10px;
+}
+h1 {
+  font-size: 36px;
+}
+h2 {
+  font-size: 32px;
+}
+h3 {
+  font-size: 30px;
+}
+h4 {
+  font-size: 28px;
+}
+h5 {
+  font-size: 26px;
+}
+h6 {
+  font-size: 24px;
+  color: #777;
+}
+/*================================ Navigation =========================*/
+nav {
+  float: left;
+}
+nav ul {
+  list-style-type: none;
+}
+nav li {
+  float: left;
+  margin: 10px 15px 0 0; 
+}
+nav li a {
+  text-decoration: none;
+  color: #555;
 }
 .clear {
   float: left;
@@ -19,40 +63,36 @@ body {
   margin: 0 auto;
 }
 header{
-  background: #1C92AF;
+  background: #6f9f00;
   color: #eee;
   float: left;
   width: 100%;
   text-transform: uppercase;
-  padding-top: 40px; 
+  padding-bottom: 40px; 
+  position: relative;
+  height: 50px;
+  border-top: 10px solid #4f7100;
+  box-shadow: 0 1px 0 #80b800 inset, 0 -1px 0 #4f7100 inset, 0 1px 0 #fff;
+  background-color: #6f9f00;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(111, 159, 0)), to(rgb(94, 135, 0)));
+  background-image: -webkit-linear-gradient(top, rgb(111, 159, 0), rgb(94, 135, 0));
+  background-image: -moz-linear-gradient(top, rgb(111, 159, 0), rgb(94, 135, 0));
+  background-image: -o-linear-gradient(top, rgb(111, 159, 0), rgb(94, 135, 0));
+  background-image: -ms-linear-gradient(top, rgb(111, 159, 0), rgb(94, 135, 0));
+  background-image: linear-gradient(top, rgb(111, 159, 0), rgb(94, 135, 0));
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#6f9f00', EndColorStr='#5e8700');
+
 }
 header h1 {
   float: left;
   font-size: 42px;
-  line-height: 34px;
   font-weight: 500;
-  padding: 5px 0 0 0;
+  color: #fff;
 }
 .email_address {
   float: right;
-  margin-top: 15px;
+  margin-top: 10px;
   color: #888;
-}
-footer {
-}
-nav {
-  float: left;
-}
-nav ul {
-  list-style-type: none;
-}
-nav li {
-  float: left;
-  margin: 15px 15px 0 0; 
-}
-nav li a {
-  text-decoration: none;
-  color: #555;
 }
 .content {
   float: left;
@@ -61,29 +101,55 @@ nav li a {
 ul.projects {
   width: 980px;
   float: left;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 ul.projects li {
   float: left;
+  width: 958px; 
+  height: 100px;
   margin: 0 20px 20px 0;
-  /*padding: 20px;*/  
-  border: 1px solid #333;
+  border: 1px solid #777;
+  position: relative;
+  overflow: hidden;
+}
+ul.projects li:hover .overlay {
+  background: rgba(0,0,0,0.4);
+}
+ul.projects li h3 {
+  font-family: 'Open Sans', Verdana, Helvetica, sans-serif; 
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 52px;
+  font-weight: 500;
+  position: absolute;
+  bottom: 10px;
+  padding-left: 5px;
+  cursor: pointer;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
 }
 .img_container {
-  width: 174px;
-  height: 174px;
   overflow: hidden
 }
 .img_container img {
-  height: 300px;
-  margin: 0px 0 0 0px;
+  width: 960px;
+  margin-top: -60px;
 }
-
-#slider {
-  height: 400px;
-  overflow: hidden;
+.left {
+  float:left;
+  width: 500px;
 }
-
-#slider img {
-  margin-top: -20px;
+.right {
+  float: right;
+  margin: 10px 0 0 20px;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#lightbox-image {
+  border: 1px solid #999;
 }
