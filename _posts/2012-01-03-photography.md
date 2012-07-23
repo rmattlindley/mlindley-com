@@ -1,5 +1,7 @@
 ---
 layout: posts
 title: Photography
-image: /img/limes.jpg
+image: /img/sophie.jpg
 ---
+
+![Sophie photo](/img/sophie.jpg)

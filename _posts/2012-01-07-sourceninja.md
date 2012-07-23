@@ -4,6 +4,5 @@ title: SourceNinja
 image: /img/sn_blog.png
 ---
 
-<img src="/img/sn_home.png" />
-
-<img src="/img/sn_blog.png" />
+![SourceNinja Home Page](/img/sn_home.png)
+![SourceNinja Blog](/img/sn_blog.png)
