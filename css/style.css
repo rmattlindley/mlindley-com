@@ -13,7 +13,6 @@ body, p {
   font-family: 'Open Sans', Verdana, Helvetica, sans-serif; 
   color: #777;
   line-height: 140%;
-  margin-bottom: 10px;
 }
 h1 {
   font-size: 36px;
@@ -37,20 +36,59 @@ h6 {
   color: #777;
   margin: 0;
 }
+a {
+  color: #6f9f00;
+  text-decoration: none;
+}
 /*================================ Navigation =========================*/
 nav {
   float: left;
+  width: 100%;
+  background: #4f7100;
+  font-size: 13px;
+  position: relative;
+  z-index: 10;
+  color: #85A738;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 nav ul {
   list-style-type: none;
 }
 nav li {
   float: left;
-  margin: 10px 15px 0 0; 
+  margin: 0 15px 0 0; 
 }
 nav li a {
   text-decoration: none;
-  color: #555;
+  color: inherit;
+}
+nav li>ul {
+  position: absolute;
+  z-index: 50;
+  background: #fff;
+  border: 1px solid #999;
+  display: none;
+}
+nav li>ul li {
+  float: left;
+  clear: left;
+  width: 100%;
+}
+nav li> ul li:hover {
+  background: red;
+}
+nav li>ul li a {
+  padding-left: 10px; 
+}
+.email_address {
+  float: right;
+  color: inherit;
+}
+.email_address a {
+  text-decoration: none;
+  color: inherit;
 }
 .clear {
   float: left;
@@ -64,9 +102,28 @@ nav li a {
 #main img {
   max-width: 960px;
 }
+#posts ul, #posts ul li {
+  width: 100%;
+  float: left;
+  margin-bottom: 20px;
+}
 #posts img {
   border: 10px solid #fff;
   box-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+  width: 500px;
+  float: left;
+  clear: both;
+  margin-bottom: 20px;
+}
+#posts h3, #posts h4 {
+  width: 420px;
+  float: left;
+  margin: 0 0 10px 20px;
+}
+#posts h4 {
+  font-family: 'Open Sans', Verdana, Helvetica, sans-serif; 
+  font-size: 16px;
+  color: #777;
 }
 .wrapper {
   width: 960px;
@@ -78,10 +135,8 @@ header{
   float: left;
   width: 100%;
   text-transform: uppercase;
-  padding-bottom: 40px; 
   position: relative;
-  height: 50px;
-  border-top: 10px solid #4f7100;
+  margin-bottom: 20px;
   box-shadow: 0 1px 0 #80b800 inset, 0 -1px 0 #4f7100 inset, 0 1px 0 #fff;
   background-color: #6f9f00;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(111, 159, 0)), to(rgb(94, 135, 0)));
@@ -91,18 +146,24 @@ header{
   background-image: -ms-linear-gradient(top, rgb(111, 159, 0), rgb(94, 135, 0));
   background-image: linear-gradient(top, rgb(111, 159, 0), rgb(94, 135, 0));
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#6f9f00', EndColorStr='#5e8700');
-
 }
 header h1 {
   float: left;
   font-size: 42px;
+  line-height: 42px;
   font-weight: 500;
   color: #fff;
+  margin: 10px 0;
 }
-.email_address {
-  float: right;
-  margin-top: 10px;
-  color: #888;
+footer {
+  width: 960px;
+  margin: 0 auto 20px auto;
+  text-align: center;
+}
+footer a{
+  color: inherit;
+  text-decoration: none;
+  font-size: 12px;
 }
 .content {
   float: left;
@@ -121,21 +182,33 @@ ul.projects li {
   border: 5px solid #fff;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 1px 5px rgba(0,0,0,0.3), 0 0 5px rgba(0,0,0,0.8) inset;
+  box-shadow: 0 1px 10px rgba(0,0,0,0.4), 0 0 5px rgba(0,0,0,0.8) inset;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.4);
+}
+ul.projects li:hover h3 {
+  color: #80b800;
 }
 ul.projects li:hover .overlay {
-  background: rgba(0,0,0,0.1);
+  background: rgba(0,0,0,0.5);
 }
 ul.projects li h3 {
+  font-family: Helvetica, Arial, sans-serif; 
   color: #fff;
   text-transform: uppercase;
   font-size: 52px;
-  font-weight: 500;
+  font-weight: 600;
   position: absolute;
   bottom: 10px;
   padding-left: 5px;
   cursor: pointer;
-  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+  text-shadow: 0 0 6px rgba(0,0,0,0.4);
 }
 .img_container {
   overflow: hidden
@@ -152,28 +225,7 @@ ul.projects li h3 {
   float: right;
   margin: 10px 0 0 20px;
 }
-.overlay {
-  width: 100%;
-  height: 100%;
-  /*background: rgba(0,0,0,0.3);*/
-  position: absolute;
-  top: 0;
-  left: 0;
-  /*background-color: #000000;*/
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.02)), to(rgba(0, 0, 0, 0.60)));
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.60));
-  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.60));
-  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.60));
-  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.60));
-  background-image: linear-gradient(top, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.60));
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#000000', EndColorStr='#000000');
-}
-
 .img_border {
   border: 10px solid #fff;
   box-shadow: 1px 1px 5px rgba(0,0,0,0.4);
 }
-
-
-
-
