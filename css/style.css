@@ -90,11 +90,13 @@ body {
   width: 100%;
 }
 .description h5 {
-  font-size: 14px;
+  color: #595959;
+  font-size: 13px;
   font-weight: 700;
   margin: 0;
 }
 .description p {
+  color: #aaa;
   font-size: 11px;
   margin: 0;
 }
