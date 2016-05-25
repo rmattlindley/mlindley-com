@@ -36,9 +36,17 @@ body {
 .top-nav li a:hover {
   color: #1e9700;
 }
+.section.padding-top {
+  padding-top: 50px;
+}
+.section.padding-bottom{
+  padding-bottom: 50px;
+}
+.section.padding-both {
+  padding: 50px 0;
+}
 /*========================== Main Section ==========================*/
 .main-section {
-  padding: 50px 0;
   background: #588F27;
 }
 .headshot {
@@ -49,9 +57,12 @@ body {
 .main-section p {
   color: #fff;
 }
+.main-section p {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
 /*========================== Portfolio Section ==========================*/
 .portfolio-section {
-  padding: 50px 0 0;
   background: #eee;
 }
 .portfolio-section .row {
