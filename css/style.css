@@ -68,6 +68,11 @@ body {
 .portfolio-section .row {
   margin-bottom: 20px;
 }
+.portfolio-section h3 span {
+  color: #888;
+  font-size: 24px;
+  line-height: 50px;
+}
 .gallery-images .img-container {
   height: 120px;
   overflow: hidden;
